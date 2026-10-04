@@ -1,0 +1,18 @@
+{
+  "name": "qm-simplify",
+  "version": "1.0.0",
+  "description": "Quine-McCluskey 素蕴含项与覆盖解释后端（TypeScript + Node.js + SQLite）",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/qm.test.js",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo",
+    "cli": "node dist/src/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}
