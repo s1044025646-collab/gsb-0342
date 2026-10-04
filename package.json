@@ -1,0 +1,22 @@
+{
+  "name": "qmc-backend",
+  "version": "1.0.0",
+  "description": "Quine-McCluskey 素蕴含项与覆盖解释后端（TypeScript + Node.js + SQLite，仅 API 与 CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "start": "node --no-warnings dist/server/server.js",
+    "dev": "node --no-warnings --import tsx src/server/server.ts",
+    "demo": "node --no-warnings --import tsx src/demo/demo.ts",
+    "cli": "node --no-warnings --import tsx src/cli/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
